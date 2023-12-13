@@ -4,31 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="./css/style.min.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta
+      name="msapplication-config"
+      content="./img/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <div id="calculator">
+    <main id="calculator">
       <input id="display" readonly placeholder="0" />
       <div id="keys">
-        <button onclick="appendToDisplay('+')" class="operator-bnt">+</button>
+        <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
         <button onclick="appendToDisplay('7')">7</button>
         <button onclick="appendToDisplay('8')">8</button>
         <button onclick="appendToDisplay('8')">9</button>
-        <button onclick="appendToDisplay('-')" class="operator-bnt">-</button>
+        <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
         <button onclick="appendToDisplay('4')">4</button>
         <button onclick="appendToDisplay('5')">5</button>
         <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('*')" class="operator-bnt">*</button>
+        <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
         <button onclick="appendToDisplay('1')">1</button>
         <button onclick="appendToDisplay('2')">2</button>
         <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('/')" class="operator-bnt">/</button>
+        <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
         <button onclick="appendToDisplay('0')">0</button>
         <button onclick="appendToDisplay('.')">.</button>
         <button onclick="calculate()">=</button>
-        <button onclick="clearDisplay()" class="operator-bnt">C</button>
+        <button onclick="clearDisplay()" class="operator-btn">C</button>
+        <button id="themeToggle" class="theme-toggle">
+          <img src="./img/night.png" alt="mode-btn" class="mode-btn" />
+        </button>
       </div>
-    </div>
+    </main>
   </body>
 </html>

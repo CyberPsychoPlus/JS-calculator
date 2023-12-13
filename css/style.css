@@ -88,20 +88,21 @@ h6 {
   font-style: inherit;
   font-weight: 400;
 }
-
 /*The end of style zero*/
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100vh;
   background-color: hsl(0, 0%, 95%);
+  transition: all 0.3s ease;
 }
 
 #calculator {
@@ -139,26 +140,60 @@ button {
   font-size: 3rem;
   font-weight: bold;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: hsl(0, 0%, 40%);
+  }
+  &:active {
+    background-color: hsl(0, 0%, 20%);
+  }
 }
 
-button:hover,
-button:focus {
-  background-color: hsl(0, 0%, 40%);
-}
-
-button:active {
-  background-color: hsl(0, 0%, 40%);
-}
-
-.operator-bnt {
+.operator-btn {
   background-color: hsl(35, 100%, 55%);
+  &:hover,
+  &:focus {
+    background-color: hsl(35, 100%, 65%);
+  }
+  &:active {
+    background-color: hsl(35, 100%, 75%);
+  }
 }
 
-.operator-bnt:hover,
-.operator-bnt:focus {
-  background-color: hsl(35, 100%, 65%);
+#themeToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 30%);
+  &:hover,
+  &:focus {
+    background-color: hsl(0, 0%, 40%);
+  }
+  &:active {
+    background-color: hsl(0, 0%, 20%);
+  }
 }
 
-.operator-bnt:active {
-  background-color: hsl(35, 100%, 75%);
+.mode-btn {
+  width: 50px;
+  height: 50px;
+}
+
+/* Dark mode */
+
+body.dark-mode {
+  background-color: #000814;
+  #themeToggle {
+    background: hsl(0, 0%, 85%);
+    &:hover,
+    &:focus {
+      background: hsl(0, 0%, 75%);
+    }
+    &:active {
+      background: hsl(0, 0%, 60%);
+    }
+  }
+  .mode-btn {
+    content: url(../img/sun.png);
+  }
 }

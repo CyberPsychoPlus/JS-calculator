@@ -15,3 +15,20 @@ function calculate() {
     display.value = 'Error';
   }
 }
+
+// Dark mode
+
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+const darkModeClass = 'dark-mode';
+
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+if (isDarkMode) {
+  body.classList.add(darkModeClass);
+}
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle(darkModeClass);
+  localStorage.setItem('darkMode', body.classList.contains(darkModeClass));
+});
