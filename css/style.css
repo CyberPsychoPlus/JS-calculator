@@ -118,7 +118,6 @@ body {
   padding: 20px;
   font-size: 5rem;
   text-align: left;
-  border: none;
   background-color: hsl(0, 0%, 20%);
   color: white;
 }
@@ -139,7 +138,6 @@ button {
   color: white;
   font-size: 3rem;
   font-weight: bold;
-  cursor: pointer;
   &:hover,
   &:focus {
     background-color: hsl(0, 0%, 40%);
@@ -157,6 +155,17 @@ button {
   }
   &:active {
     background-color: hsl(35, 100%, 75%);
+  }
+}
+
+.equal-btn {
+  background-color: #0077b6;
+  &:hover,
+  &:focus {
+    background-color: #136a99;
+  }
+  &:active {
+    background-color: #105e88;
   }
 }
 
@@ -195,5 +204,57 @@ body.dark-mode {
   }
   .mode-btn {
     content: url(../img/sun.png);
+  }
+}
+
+/* Adaptive */
+
+@media (max-width: 768px) {
+  body {
+    height: 100dvh;
+  }
+  #calculator {
+    max-width: 320px;
+  }
+  #keys {
+    padding: 15px;
+  }
+  #display {
+    padding: 20px 15px;
+    font-size: 2.5rem;
+  }
+  button {
+    width: 65px;
+    height: 65px;
+    font-size: 2.2rem;
+  }
+  .mode-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-height: 500px) {
+  body {
+    height: 100dvh;
+  }
+  #calculator {
+    max-width: 300px;
+  }
+  #keys {
+    padding: 10px;
+  }
+  #display {
+    padding: 10px 15px;
+    font-size: 2.5rem;
+  }
+  button {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  .mode-btn {
+    width: 25px;
+    height: 25px;
   }
 }
